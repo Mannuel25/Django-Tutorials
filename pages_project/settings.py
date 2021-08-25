@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os, django_heroku, dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-cc$aeykbq7(2_cqvtrnfr2eoy+y1hgoiwveyeyxlh-gwllve3=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://glacial-tundra-42746.herokuapp.com/']
+ALLOWED_HOSTS = ['glacial-tundra-42746.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -125,3 +125,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())
