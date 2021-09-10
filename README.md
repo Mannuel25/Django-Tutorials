@@ -1,1 +1,1 @@
-# Here is my first Django project!
+## Just me learning Django ✌️
